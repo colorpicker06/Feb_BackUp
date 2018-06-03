@@ -1,0 +1,158 @@
+﻿/*편지모양의 div에 관련된 태그*/
+.letter {
+    display: block;
+    width: 90%;
+    max-width: 750px;
+    position: relative;
+    perspective: 1000px;
+    -moz-perspective: 1000px;
+    -webkit-perspective: 1000px;
+    line-height: 1.4;
+    font-size: 14pt;
+    padding: 2em 2em;
+    margin: 75px auto;
+    color: black;
+    background: #F5ECE3;
+    box-shadow: rgba(0,0,0,.1) 0 -5px 20px,rgba(0,0,0,.1) 0 0 2px;
+    z-index: 500;
+}
+
+    .letter:before,
+    .letter:after {
+        content: '';
+        display: block;
+        width: calc(100% + 6px);
+        margin-left: -3px;
+        padding-bottom: 75px;
+        background: #fafafa;
+        position: absolute;
+        z-index: 0;
+    }
+/* 이부분은 지운 편지의 위, 아래 부분이라서 주석처리해둠
+.letter:before {
+  -webkit-transform: rotateX(-30deg);
+  -moz-transform: rotateX(-30deg);
+  transform: rotateX(-30deg);
+  top: -72px;
+  left: 0;
+  background: -moz-linear-gradient(top, #fafafa 0%, #eaeaea 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafafa), color-stop(100%,#eaeaea));
+  background: -webkit-linear-gradient(top, #fafafa 0%,#eaeaea 100%);
+  background: -o-linear-gradient(top, #fafafa 0%,#eaeaea 100%);
+  background: -ms-linear-gradient(top, #fafafa 0%,#eaeaea 100%);
+  background: linear-gradient(to bottom, #fafafa 0%,#eaeaea 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#eaeaea',GradientType=0 );
+  box-shadow: rgba(0,0,0,.1) 0 1px 1px;
+  border-top: 1px solid white;
+}
+.letter:after {
+  -webkit-transform: rotateX(30deg);
+  -moz-transform: rotateX(30deg);
+  transform: rotateX(30deg);
+  bottom: -72px;
+  left: 0;
+  background: -moz-linear-gradient(top, #eee 0%, #fff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eee), color-stop(100%,#fff));
+  background: -webkit-linear-gradient(top, #eee 0%,#fff 100%);
+  background: -o-linear-gradient(top, #eee 0%,#fff 100%);
+  background: -ms-linear-gradient(top, #eee 0%,#fff 100%);
+  background: linear-gradient(to bottom, #eee 0%,#fff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eee', endColorstr='#fff',GradientType=0 );
+  box-shadow: rgba(0,0,0,.1) 0 0 30px, rgba(0,0,0,.1) 0 1px 2px;
+}
+*/
+@media (min-width: 500px) {
+    .letter:before,
+    .letter:after {
+        width: calc(100% + 10px);
+        margin-left: -5px;
+    }
+}
+
+@media (min-width: 700px) {
+    body {
+        padding: 30px 0;
+    }
+
+    .letter {
+        margin: 100px auto;
+    }
+
+        .letter:before,
+        .letter:after {
+            width: calc(100% + 18px);
+            margin-left: -9px;
+        }
+
+        .letter:before,
+        .letter:after {
+            padding-bottom: 100px;
+        }
+
+        .letter:before {
+            top: -97px;
+        }
+
+        .letter:after {
+            bottom: -97px;
+        }
+}
+
+@media (min-width: 900px) {
+    body {
+        padding: 50px 0;
+    }
+
+    .letter {
+        margin: 150px auto;
+    }
+
+        .letter:before,
+        .letter:after {
+            width: calc(100% + 28px);
+            margin-left: -14px;
+        }
+
+        .letter:before,
+        .letter:after {
+            padding-bottom: 150px;
+        }
+
+        .letter:before {
+            top: -147px;
+        }
+
+        .letter:after {
+            bottom: -147px;
+        }
+}
+/*이 곳까지는 카피해온 소스였다. 이 아래부터는 내가 개인적으로 추가한 소스다.*/
+div.letter::before {  /*위, 아래 날개를 제거하기 위해*/
+    display: none;
+}
+
+div.letter::after {
+    display: none;
+}
+div.title{ /*편지의 제목에 대한 설정*/
+    font-size:20pt;
+    font-weight:bold;
+    letter-spacing:0.4em;
+    margin-bottom:15px;
+    color:#9C4635;
+}
+div.content{
+    color:dimgrey;
+    margin-top:30px;
+
+}
+a{
+    color:dimgray;
+    text-decoration:none;
+}
+a:hover {
+    background-color: #d9d9d9;
+}
+.input_title{
+    color:dimgray;
+}

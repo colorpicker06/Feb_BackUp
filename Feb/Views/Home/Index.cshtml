@@ -1,0 +1,96 @@
+﻿@model Feb.Models.CUser
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/index.css" rel="stylesheet" />
+    <link href="~/css/auth.css" rel="stylesheet" />
+    <!-- 모달 관련  -->
+    <link href="~/css/modal.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="bg">
+        <div id="mySidenav" class="sidenav" style="z-index:100;">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="Index">메인</a>
+            <a href="List">고민목록</a>
+            <a href="Write">글쓰기</a>
+            <a href="Suggest">건의하기</a>
+
+        </div>
+
+        <span style="font-size:30px;cursor:pointer; position: absolute; top: 30px; left: 30px;" onclick="openNav()"><font color="white">&#9776;</font></span>
+        <img src="~/image/title.png" style="position: absolute; top: 30px; right: 50px; width:10%" />
+
+        <div class="container" style="padding:150px 200px;">
+
+            <div class="login-page">
+                <div class="form">
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "register-form", @name = "form1" }))
+                    {
+                        @Html.ValidationSummary();
+
+                        <input type="text" placeholder="email address" name="email" id="email" />
+                        <input type="text" placeholder="nickname" name="nickname" />
+                        <input type="password" placeholder="password" name="pw" />
+                        <input type="password" placeholder="password check" name="pw_check" />
+                        <input type="hidden" name="mode" value="regist" />
+                        <input type="button" value="Create" onClick="check1()" />
+
+                        <p class="message">Already registered? <a href="#">Sign In</a></p>
+                    }
+
+                    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "login-form", @name = "form2" }))
+                    {
+                        <input type="text" placeholder="useremail" name="email" />
+                        <input type="password" placeholder="password" name="pw" />
+                        <input type="hidden" name="mode" value="login" />
+                        <input type="button" value="Login" onClick="check2()" />
+
+                        <p class="message">Not registered? <a href="#">Create an account</a></p>
+                    }
+                </div>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                        </div>
+                        <div class="modal-body">
+                            <p style="margin-top:0.8em"> <span id="demo"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="house">
+                <img src="~/image/house.png" style="position: absolute; bottom: 10px; right: 50px; width:400px" />
+            </div>
+            <div id="postbox">
+                <img src="~/image/postclick.png" onclick="alert('hi');" style="position: absolute; bottom: 10px; right: 470px; width:7%; opacity:0.8;" />
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/js/index.js"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery/jquery-2.1.3.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $('.message a').click(function () {
+                $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+            });
+        });
+    </script>
+    <script src="~/js/auth.js"></script>
+</body>
+</html>
+

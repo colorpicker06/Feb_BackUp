@@ -1,0 +1,73 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/admin.css" rel="stylesheet" />
+    <title>Member</title>
+</head>
+<body>
+    <div id="nav_menu">
+        <ul>
+            <li><a href="Member">멤버관리</a></li>|
+            <li><a href="Category">카테고리 관리</a></li>|
+            <li><a href="Report">신고글 관리</a></li>|
+            <li><a href="AdminSuggest">건의사항</a></li>|
+            <li><a href="Index">홈</a></li>
+        </ul>
+    </div>
+    <div> 
+        <h3>회원관리</h3>
+       
+        <table id="search" align="center">
+            <select>
+                <option value="id">ID</option>
+                <option value="email">EMAIL</option>
+                <option value="password">PW</option>
+                <option value="nickname">닉네임</option>
+            </select>&nbsp;
+            <input type=" text" />
+            <input type="button" value="검색" />
+        </table><br />
+
+        <table id="member"  align="center">
+
+            <tr>
+                <th>ID</th>
+                <th>EMAIL</th>
+                <th>PW</th>
+                <th>닉네임</th>
+                <th>탈퇴여부</th>
+                <th>정지여부</th>
+            </tr>
+
+            
+                <tr><a href="member_1">
+                    <td>rlathfdl463</td>
+                    <td>rlathfdl463@naver.com</td>
+                    <td>gotjs654</td>
+                    <td>오로라민씨</td>
+                    <td>N</td>
+                    <td>N</td>
+                     <td><button onclick="location.href ='member_1' ">관리하기</button></td>
+                </tr>
+                </a>
+                <tr>
+                    <td>hellosunworld</td>
+                    <td>nahaesun463@naver.com</td>
+                    <td>choi1234</td>
+                    <td>안노옹</td>
+                    <td>N</td>
+                    <td>Y</td>
+                    <td><button>관리하기</button></td>
+                </tr>
+
+</table>
+    </div>
+</body>
+</html>

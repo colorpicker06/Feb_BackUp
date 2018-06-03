@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/admin.css" rel="stylesheet" />
+    <title>Category</title>
+</head>
+<body>
+    <div id="nav_menu">
+        <ul>
+            <li><a href="Member">멤버관리</a></li>|
+            <li><a href="Category">카테고리 관리</a></li>|
+            <li><a href="Report">신고글 관리</a></li>|
+            <li><a href="AdminSuggest">건의사항</a></li>|
+            <li><a href="Index">홈</a></li>
+        </ul>
+    </div>
+    <div> 
+        <h3>카테고리 관리</h3>
+        <table id="category"  align="center">
+
+            <tr>
+                <th>대분류</th>
+                <th>중분류</th>
+            </tr>
+
+            <tr>
+                <td>나</td>
+                <td>행복</td>
+                <td><button id="remove">삭제</button></td>
+            </tr>
+
+            <tr>
+                <td>나</td>
+                <td>건강</td>
+                <td><button id="remove">삭제</button></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="text" placeholder="대분류" />
+                    <button id="add">추가</button>
+                </td>
+
+                <td>
+                    <input type="text" placeholder="중분류" />
+                    <button id="add">추가</button>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>

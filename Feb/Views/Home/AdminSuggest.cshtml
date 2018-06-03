@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/admin.css" rel="stylesheet" />
+    <title>AdminSuggest</title>
+</head>
+<body>
+    <div id="nav_menu">
+        <ul>
+            <li><a href="Member">멤버관리</a></li>|
+            <li><a href="Category">카테고리 관리</a></li>|
+            <li><a href="Report">신고글 관리</a></li>|
+            <li><a href="AdminSuggest">건의사항</a></li>|
+            <li><a href="Index">홈</a></li>
+        </ul>
+    </div>
+    <h3>건의사항</h3>
+
+    <table id="search" align="center">
+        <select>
+            <option value="작성자">작성자</option>
+            <option value="제목">제목</option>
+            <option value="내용">내용</option>
+        </select>&nbsp;
+        <input type=" text" />
+        <input type="button" value="검색" />
+    </table><br />
+
+    <table id="adminsuggest" align="center">
+
+        <tr>
+            <th>작성자</th>
+            <th>작성일</th>
+            <th>제목</th>
+            <th>내용</th>
+            <th>처리여부</th>
+        </tr>
+
+
+        <tr>
+                <td>나해선</td>
+                <td>2018-05-25</td>
+                <td>안녕하세요 개발자님</td>
+                <td>안녕하세요 시샘달님들 만나서...</td>
+                <td>N</td>
+                <td><button onclick="location.href ='Suggest_1' ">상세보기</button></td>
+        </tr>
+    </table>
+</body>
+</html>

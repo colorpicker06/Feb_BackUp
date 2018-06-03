@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Mirim2018" Class="LUserDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=14.63.199.209,5433;Initial Catalog=Mirim2018;Persist Security Info=True;User ID=mirim2018" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Mirim2018ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Feb_member" Member="Feb_member">
+    <Type Name="Feb_member">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="pw" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="nickname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="leave_chk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="report_chk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Feb_member_Feb_Worry" Member="Feb_Worry" ThisKey="id" OtherKey="writer" Type="Feb_Worry" />
+      <Association Name="Feb_member_Feb_suggest" Member="Feb_suggest" ThisKey="id" OtherKey="writer" Type="Feb_suggest" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Feb_Worry" Member="Feb_Worry">
+    <Type Name="Feb_Worry">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="category_fk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="l_category_fk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="content" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="writer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="reg_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="report_chk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Feb_member_Feb_Worry" Member="Feb_member" ThisKey="writer" OtherKey="id" Type="Feb_member" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Feb_suggest" Member="Feb_suggest">
+    <Type Name="Feb_suggest">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="writer" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="reg_date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="title" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="content" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="action_chk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Feb_member_Feb_suggest" Member="Feb_member" ThisKey="writer" OtherKey="id" Type="Feb_member" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

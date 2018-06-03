@@ -1,0 +1,33 @@
+﻿/*사이트의 전반적인 input태그의 스타일을 지정 - 대부분의 input들이 통일성을 위해 border나 bgcolor가 같아야하기 때문에 이렇게 inputTags라고 따로 뺌*/
+/*만약 개발하는 페이지에 input태그가 들어간다면 이걸 link해서 통일된 input UI를 제공하도록*/
+/*border, bgcolor는 이곳에서 수정하되, input 태그의 사이즈는 해당 페이지에서 css를 먹이도록 한다. (페이지마다 input크기가 달라서)*/
+textarea { /*입력내용이 늘어날 시 textarea의 크기도 늘어나는 특징*/
+    resize: none;
+    /* box-sizing: padding-box; */
+    overflow: hidden;
+    /* demo only: */
+    padding: 10px;
+    width: 500px;
+    font-size: 14px;
+    display: block;
+    border-radius: 10px;
+    border: 2px solid #d9d9d9;
+}
+input[type="text"] {
+    border-radius: 10px;
+    border: 2px solid #d9d9d9;
+    padding: 10px;
+}
+.button_default {
+    width: 80px;
+    height: 40px;
+    color: dimgray;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 1px solid #d9d9d9;
+    background-color: #E8E0D3;
+    font-size: 12pt;
+}
+    .button_default:hover {
+        background-color: #D6CFC3;
+    }

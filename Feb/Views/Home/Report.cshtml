@@ -1,0 +1,69 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/admin.css" rel="stylesheet" />
+    <title>Report</title>
+</head>
+<body>
+    <div id="nav_menu">
+    <ul>
+        <li><a href="Member">멤버관리</a></li>|
+        <li><a href="Category">카테고리 관리</a></li>|
+        <li><a href="Report">신고글 관리</a></li>|
+        <li><a href="AdminSuggest">건의사항</a></li>|
+        <li><a href="Index">홈</a></li>
+    </ul>
+</div>
+        <h3>신고글 관리</h3>
+
+        <table id="search" align="center">
+            <select>
+                <option value="피해자">피해자</option>
+                <option value="가해자">가해자</option>
+                <option value="신고내용">신고내용</option>
+            </select>&nbsp;
+            <input type=" text" />
+            <input type="button" value="검색" />
+        </table><br />
+
+        <table id="report"  align="center">
+
+            <tr>
+                <th>피해자</th>
+                <th>가해자</th>
+                <th>신고내용</th>
+                <th>처리여부</th>
+                <th>처리내용</th>
+                
+            </tr>
+
+            <tr>
+                <td>나해선</td>
+                <td>김소언</td>
+                <td>너무 귀여운 댕댕이...</td>
+                <td>Y</td>
+                <td>정지 20일</td>
+                
+                <td><button onclick="location.href ='Report_1' ">상세내용</button></td>
+            </tr>
+
+            <tr>
+                <td>김소언</td>
+                <td>손가람</td>            
+                <td>음란물 유포</td>
+                <td>N</td>
+                <td></td>
+                <td><button onclick="location.href ='Report_1' ">상세내용</button></td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>

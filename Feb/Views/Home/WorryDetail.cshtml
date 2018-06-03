@@ -1,0 +1,148 @@
+﻿<!--건의사항을 입력받는 페이지-->
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>WorryDetail</title>
+    <link href="~/css/letter.css" rel="stylesheet" />
+    <link href="~/css/inputTags.css" rel="stylesheet" />
+    <link href="~/css/report.css" rel="stylesheet" />
+    <style>
+        html {
+            background-image: url('../../image/starlight.png');
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 500px;
+        }
+
+        .input_title {
+            margin-right: 10px;
+            font-weight: 700;
+            border-radius: 10px;
+            border: 2px solid #d9d9d9;
+            padding: 10px;
+        }
+
+        .detail_content {
+            width: 100%;
+            min-height: 344px;
+            border-radius: 10px;
+            border: 2px solid #d9d9d9;
+            padding: 10px;
+            text-align: justify;
+            margin: 20px 0px;
+        }
+
+        span.detail_title {
+            border-radius: 10px;
+            border: 2px solid #d9d9d9;
+            padding: 10px;
+        }
+
+        .comments {
+            text-align: left;
+        }
+
+        .comment {
+            margin: 10px 0px;
+        }
+    </style>
+    <link href="~/css/index.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="mySidenav" class="sidenav" style="z-index:100;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="Index">메인</a>
+        <a href="List">고민목록</a>
+        <a href="Write">글쓰기</a>
+        <a href="Suggest">건의하기</a>
+
+    </div>
+
+    <span style="font-size:30px;cursor:pointer; position: absolute; top: 30px; left: 30px;" onclick="openNav()"><font color="white">&#9776;</font></span>
+    <div class="letter">
+        <center><div class="title">고민보기</div></center>
+        <div class="content">
+            <center>
+                <div style="text-align:left;margin:30px 0px;">
+                    <span class="input_title" style="display:inline-block;width:10%">사랑</span><span class="detail_title" style="display:inline-block;width:88%">저는 요즘 사랑에 빠졌어요...</span>
+
+                </div>
+                <div>
+                    <div class="detail_content">
+                        저는 중학교 3학년인데 요즘 반에 좋아하는 남자친구가 있답니다. 아니 그 친구가 제 앞자리에 앉아 있는데 엄청 잘생겼어요 진짜..
+                        막 살짝 모델 이수혁 닮은 느낌? 처음 반배정 받았을 때, 그 친구가 딱 들어오는데 정말 '아 쟤다.'라는 생각이 들면서 딱 첫눈에 반했어요ㅠㅠ
+                        그리고 옆자리 짝하면서 되게 친해졌어요. 아마 이때부터 그 친구를 좋아했던 것 같아요. 그리고 슬프게도 자리를 바꿨는데 제 바로 앞자리가 되었어요!!
+                        정말 다행이다 싶었는데 이 짝남이 요즘 좀 평소랑 다른 행동을 해요! 막 제 물건 다 가져가서 자기 이름을 써놓고 '000꺼'라고 이렇게 써놓질 않나, 갑자기 학교 끝났는데
+                        자기가 산책이 하고싶데요! 그리고 나서는 맨날 저희집을 데려다줘요. 그리고 예전에는 안했던 질문들을 막 하는데 "너는 나중에 어떤 남자 만나고 싶어?"라던지 이상형을 계속 물어봐요!!
+                        진짜 너무 떨리고 모르겠고 그런데 이거 그린 라이트 일까요?ㅠㅠㅠ 제발ㅠㅠ
+                    </div>
+                </div>
+
+                <a href="#" class="cd-popup-trigger" style="margin:10px">신고하기</a>
+
+                <div class="cd-popup" role="alert">
+                    <div class="cd-popup-container">
+                        <br><br>느그누구님을 신고하시겠습니까?  <br><br>
+                        <textarea rows="1" placeholder="신고사유를 입력하세요." style="width:300px;"></textarea><br><br>
+
+                        <ul class="cd-buttons">
+                            <li><a href="#">Yes</a></li>
+                            <li><a href="#">No</a></li>
+                        </ul>
+                        <a href="#" class="cd-popup-close img-replace">Close</a>
+                    </div> <!-- cd-popup-container -->
+                </div>
+                <div class="comments">
+                    <div class="comment">
+                        <div style="font-size:13pt;margin:2px 0px;">
+                            <span style="font-weight:600">나해선천재뿡뿡뿡</span> 님
+                            <span style="font-size:10pt;">2018.05.27</span>
+                        </div>
+                        <div>
+                            <span style="margin:2px 0px;margin-left:10px;">
+                                짝남이 좋아하는거 맞네여
+                            </span>
+                            <span>
+                                <!--추후 별 or 신고 버튼이 들어갈 공간-->
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="comment">
+                        <div style="font-size:13pt;margin:2px 0px;">
+                            <span style="font-weight:600">김소언무거북이와두루미</span> 님
+                            <span style="font-size:10pt;"> 2018.05.29</span>
+                        </div>
+                        <div>
+                            <span style="margin:2px 0px;margin-left:10px;">
+                                ㅊㅋㅊㅋ조만간 고백할 듯
+                            </span>
+                            <span>
+                                <!--추후 별 or 신고 버튼이 들어갈 공간-->
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                <div>
+                    <input type="submit" class="button_default" value="돌아가기" onclick="location.href='List'" />
+                </div>
+            </center>
+        </div>
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="~/js/index.js"></script>
+    <script src="~/js/report.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/admin.css" rel="stylesheet" />
+    <title>Report_1</title>
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="nav_menu">
+        <ul>
+            <li><a href="Member">멤버관리</a></li>|
+            <li><a href="Category">카테고리 관리</a></li>|
+            <li><a href="Report">신고글 관리</a></li>|
+            <li><a href="AdminSuggest">건의사항</a></li>|
+            <li><a href="Index">홈</a></li>
+        </ul>
+    </div>
+
+    <div>
+        피해자 : <input type="text" value="나해선" /><br />
+        가해자 : <input type="text" value="김소언" /><br />
+        처리여부 : <select>
+            <option value="Y">Y</option>
+            <option value="N">N</option>
+        </select><br />
+        처리내용 : <select>
+            <option value="3일정지">3일정지</option>
+            <option value="7일정지">7일정지</option>
+            <option value="영구정지">영구정지</option>
+        </select><br />
+        신고사유 :  김소언이 제게 너무 귀여운 댕댕이를 보여 줘서 심쿵사 했습니다.<br />
+    </div>
+    <br />
+    <button type="button" class="btn" onclick="location.href='Report'">확인</button>
+</body>
+</html>

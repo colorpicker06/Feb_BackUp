@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/admin.css" rel="stylesheet" />
+    <title>Suggest_1</title>
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="nav_menu">
+        <ul>
+            <li><a href="Member">멤버관리</a></li>|
+            <li><a href="Category">카테고리 관리</a></li>|
+            <li><a href="Report">신고글 관리</a></li>|
+            <li><a href="AdminSuggest">건의사항</a></li>|
+            <li><a href="Index">홈</a></li>
+        </ul>
+    </div>
+    <div>
+        작성자 : <input type="text" value="나해선" /><br />
+        작성일 : 2018-05-25<br />
+        제목: 안녕하세요 개발자님<br />
+        내용 : 안녕하세요 시샘달님들 만나서 반가워요 뿡뿌루 뿡빡<br />
+        처리여부 :
+        <select>
+            <option value="Y">Y</option>
+            <option value="Y">N</option>
+        </select>
+    </div>
+    <br />
+    <button type="button" class="btn" onclick="location.href='AdminSuggest'">확인</button>
+</body>
+</html>
